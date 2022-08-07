@@ -17,3 +17,7 @@ INSERT INTO tb_course(name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML','http
 
 INSERT INTO tb_offer(edition, start_Moment, end_Moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2022-08-06T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2022-08-10T20:50:07.12345Z', 1);
 INSERT INTO tb_offer(edition, start_Moment, end_Moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2022-08-06T20:50:07.12345Z', TIMESTAMP WITH TIME ZONE '2022-08-10T20:50:07.12345Z', 1);
+
+INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Trilha HTML','Trilha principal do curso',1,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',1,1);
+INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Forum','Tire suas duvidas',2,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',2,1);
+INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Live Bonus','Live exclusiva para alunos',3,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',0,1);
