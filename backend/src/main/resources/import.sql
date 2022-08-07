@@ -21,3 +21,8 @@ INSERT INTO tb_offer(edition, start_Moment, end_Moment, course_id) VALUES ('1.0'
 INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Trilha HTML','Trilha principal do curso',1,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',1,1);
 INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Forum','Tire suas duvidas',2,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',2,1);
 INSERT INTO tb_resource(title,description,position,img_Uri,type, offer_id) VALUES ('Live Bonus','Live exclusiva para alunos',3,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',0,1);
+
+
+INSERT INTO tb_section(title,description,position,img_Uri,resource_id,prerequisite_id) VALUES ('Capitulo 1','Neste Capitulo vamos começar',1,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',1,null);
+INSERT INTO tb_section(title,description,position,img_Uri,resource_id,prerequisite_id) VALUES ('Capitulo 2','Neste Capitulo vamos aprender coisas novas',2,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',1,1);
+INSERT INTO tb_section(title,description,position,img_Uri,resource_id,prerequisite_id) VALUES ('Capitulo 3','Neste Capitulo vamos aprender coisas novas',3,'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',1,2);
