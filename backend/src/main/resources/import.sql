@@ -29,3 +29,18 @@ INSERT INTO tb_section(title,description,position,img_Uri,resource_id,prerequisi
 
 INSERT INTO tb_enrollment(user_id,offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1,1,TIMESTAMP WITH TIME ZONE '2022-08-06T20:50:07.12345Z',null,true,false);
 INSERT INTO tb_enrollment(user_id,offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2,1,TIMESTAMP WITH TIME ZONE '2022-08-06T20:50:07.12345Z',null,true,false);
+
+INSERT INTO tb_lesson(title,position,section_id) VALUES ('Aula 1 do capítulo 1',1,1);
+INSERT INTO tb_content(id,text_content,video_uri) VALUES (1,'Material de Apoio: ABC','https://www.youtube.com/watch?v=wvbUZpkbLas');
+
+INSERT INTO tb_lesson(title,position,section_id) VALUES ('Aula 2 do capítulo 1',2,1);
+INSERT INTO tb_content(id,text_content,video_uri) VALUES (2,'','https://www.youtube.com/watch?v=wvbUZpkbLas');
+
+INSERT INTO tb_lesson(title,position,section_id) VALUES ('Aula 3 do capítulo 1',3,1);
+INSERT INTO tb_content(id,text_content,video_uri) VALUES (3,'','https://www.youtube.com/watch?v=wvbUZpkbLas');
+
+INSERT INTO tb_lesson(title,position,section_id) VALUES ('Tarefa do capítulo 1',4,1);
+INSERT INTO tb_task(id,description,question_count,approval_count,weight,due_date) VALUES (4,'Fazer um trabalho legal',5,4,1.0,TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z');
+
+INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (1,1,1);
+INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (2,1,1);
