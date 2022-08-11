@@ -44,6 +44,8 @@ INSERT INTO tb_task(id,description,question_count,approval_count,weight,due_date
 
 INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (1,1,1);
 INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (2,1,1);
+INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (3,1,1);
+INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (4,1,1);
 
 INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Primeiro feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',true,'/offers/1/resource/1/sections/1',1);
 INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Segundo feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',true,'/offers/1/resource/1/sections/1',1);
