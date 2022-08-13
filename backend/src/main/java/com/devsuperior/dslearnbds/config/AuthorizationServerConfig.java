@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -45,6 +46,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	
 	@Autowired
 	private JwtTokenEnhancer tokenEnhancer;
+	
+	@Autowired
+	private UserDetailsService userDetailsService; 
 		
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
@@ -57,8 +61,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		.withClient(clientId)
 		.secret(passwordEncoder.encode(clientSecret)) // esta é a senha da aplicação, não do usuário.
 		.scopes("read", "write")
-		.authorizedGrantTypes("password")
-		.accessTokenValiditySeconds(jwtDuration); // 86400 segundos de token válido.
+		.authorizedGrantTypes("password", "refresh_token")
+		.accessTokenValiditySeconds(jwtDuration)     // 86400 segundos de token válido.
+		.refreshTokenValiditySeconds(jwtDuration);   // 86400 segundos de token válido.
 	}
 
 	@Override
@@ -70,7 +75,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		endpoints.authenticationManager(authenticationManager)
 		.tokenStore(tokenStore)
 		.accessTokenConverter(accessTokenConverter)
-		.tokenEnhancer(chain);
+		.tokenEnhancer(chain)
+		.userDetailsService(userDetailsService);
 	}
 	
 	
