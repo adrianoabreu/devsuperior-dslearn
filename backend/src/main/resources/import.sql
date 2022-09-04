@@ -49,7 +49,7 @@ INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (4,1,1);
 
 INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Primeiro feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',true,'/offers/1/resource/1/sections/1',1);
 INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Segundo feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',true,'/offers/1/resource/1/sections/1',1);
-INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Terceiro feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',true,'/offers/1/resource/1/sections/1',1);
+INSERT INTO tb_notification(text, moment, read, route, user_id) VALUES ('Terceiro feedback',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z',false,'/offers/1/resource/1/sections/1',1);
 
 INSERT INTO tb_deliver(uri, moment, status, feedback, correct_count, lesson_id, user_id, offer_id) VALUES ('https://github.com/adrianoabreu/devsuperior-dslearn',TIMESTAMP WITH TIME ZONE '2022-08-27T20:50:07.12345Z', 0, null, null, 4, 1, 1);
 
